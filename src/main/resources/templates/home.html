@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<head>
+    <title text="Cities"> </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body onload="GetAllCities()" >
+
+    <div >
+        <div>
+            CITY <br>
+            <br>
+            <input type="text" size="20" id="add_city" name="city" placeholder="insert new city">
+            <button onclick="AddCityFunction()">ADD CITY</button>
+        </div>
+        <br>
+        <div>
+            <select onchange="ChangeCity()" size="1" name="select_city" id="select_city">
+            </select>
+            <button onclick="DeleteCity()">DELETE CITY</button>
+            <button onclick="RenameCity()">RENAME CITY</button>
+            <input type="text" size="20" id="rename_city" name="city">
+        </div>
+        <div>
+            <br>
+            <br>
+            DESCRIPTION <br>
+            <br>
+            <input type="text" size="40" id="add_description" name="city" placeholder="insert new description">
+            <button onclick="AddCityDescriptionFunction()">ADD DESCRIPTION</button>
+        </div>
+        <div>
+            <br>
+            <select onchange="ChangeDescription()" size="1" name="select_description" id="select_description">
+            </select>
+            <button onclick="DeleteDescription()">DELETE DESCRIPTION</button>
+            <button onclick="CorrectDescription()">CORRECT DESCRIPTION</button>
+            <input type="text" size="40" id="correct_description" name="city">
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

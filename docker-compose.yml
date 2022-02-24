@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+
+  postgres:
+    container_name: pg_city
+    image: postgres:14.0
+    environment:
+      POSTGRES_DB: "cities-directory"
+      POSTGRES_USER: "resliv"
+      POSTGRES_PASSWORD: "111"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - ./psql:/var/lib/postgresql/data
+#      - ./src/main/resources/psql:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    restart: always
